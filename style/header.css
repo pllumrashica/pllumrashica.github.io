@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, .1);
+}
+
+header .container {
+  animation: move-top 1.5s linear;
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo a {
+  text-decoration: none;
+  color: #333;
+}
+
+header .container .logo a>h2 {
+  text-decoration: none;
+  font-size: 22px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: color .3s;
+  cursor: pointer;
+}
+
+header .container .logo h2:hover {
+  color: #facf0f;
+}
+
+header .container .nav-items {
+  display: flex;
+}
+
+header .container .nav-items li {
+  list-style: none;
+  margin: 30px;
+}
+
+header .container .nav-items li a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: color .3s;
+}
+
+header .container .nav-items li a:hover {
+  color: #facf0f;
+}
+
+nav {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  :root {
+    --nav-bg: #03000e;
+    --main-clr: #facf0f;
+    --nav-shadow: 0px 3px var(--main-clr);
+  }
+
+
+  header .container {
+    display: none;
+  }
+
+  nav {
+    padding: 12px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, .1);
+  }
+
+
+  nav ul {
+    --padding: 20px;
+    --font-size: 17px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size);
+    overflow-y: hidden;
+    transition: 1s cubic-bezier(.68, -0.55, .27, 10.55);
+    box-shadow: var(--nav-shadow);
+  }
+
+  nav ul li {
+    padding: var(--padding);
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+
+  nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 1.7px;
+    border-radius: 99px;
+    background: var(--main-clr);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+
+  nav .menu {
+    width: 22px;
+    height: 16px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px;
+  }
+
+  nav .menu span {
+    width: 100%;
+    height: 2px;
+    border-radius: 99px;
+    background: #000;
+    transition: 0.3s ease;
+    transform-origin: left;
+  }
+
+  nav .menu.active span {
+    background: var(--main-clr);
+  }
+
+  nav .menu.active span:nth-child(1) {
+    transform: rotate(40deg);
+  }
+
+  nav .menu span:nth-child(3) {
+    transform-origin: left;
+  }
+
+  nav .menu.active span:nth-child(3) {
+    transform: rotate(-40deg);
+  }
+
+  nav .menu.active span:nth-child(2) {
+    transform: scale(0);
+  }
+
+  nav .menu {
+    display: flex;
+  }
+
+  nav ul {
+    --height: 0px;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 56px;
+    height: var(--height);
+    transition: 1s cubic-bezier(.68, -0.55, .27, 1.55);
+  }
+
+  nav ul.active {
+    --height: calc((((var(--padding) * 2) + (var(--font-size) * 1.5))) * var(--childenNumber));
+    /*   (Block Level Padding + The Font Size) * The Number of Children   */
+
+
+    transition: 1s ease;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    color: #000;
+    width: 100%;
+    text-transform: capitalize;
+  }
+}
