@@ -526,6 +526,9 @@ footer .container .copyright p>a {
 }
 
 @media only screen and (max-width: 767px) {
+  .hero-banner .container .row .content ul {
+    margin-top: 50px;
+  }
 
   .about .container .row,
   .projects .container .row,
@@ -542,11 +545,21 @@ footer .container .copyright p>a {
     margin: 50px auto;
   }
 
-   footer .container .row {
+  footer .container .row {
     align-items: center;
-   }
+  }
 
-   footer .container .row .col h3 {
+  footer .container .row .col h3 {
     text-align: center;
-   }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about .container .row {
+    flex-direction: column;
+  }
+
+    .about .container .row .col {
+      margin-bottom: 120px;
+    }
 }

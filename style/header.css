@@ -27,6 +27,23 @@ header .container {
   align-items: center;
 }
 
+header .container .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .container .logo .logo-img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+header .container .logo .logo-img img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
 header .container .logo a {
   text-decoration: none;
   color: #333;
@@ -86,6 +103,19 @@ nav {
   header .container {
     display: none;
   }
+
+  nav div>.logo-img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+  }
+
+  nav div>.logo-img img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+
 
   nav {
     padding: 12px 0px;
