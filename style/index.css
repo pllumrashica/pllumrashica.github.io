@@ -41,7 +41,7 @@ html {
 
 .hero-banner .container .row .icons {
   animation: move-left 1.5s linear;
-  flex-basis: 10%;
+  flex-basis: 8.63%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -79,7 +79,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-basis: 90%;
+  flex-basis: 91.37%;
   height: 100vh;
 }
 
@@ -403,9 +403,9 @@ html {
 }
 
 .contact .container form input {
-  width: 100%;
+  min-width: 100%;
   color: #333;
-  padding: 15px;
+  padding: 15px 0px;
   border: 1px solid #ebebeb;
   letter-spacing: 0;
   background: #f0f0f0;
@@ -414,17 +414,22 @@ html {
   margin-bottom: 25px;
 }
 
+.contact .container form input:focus {
+  outline: 3px solid #facf0f;
+}
+
 .contact .container form input::placeholder,
 .contact .container form textarea::placeholder {
   color: rgba(51, 51, 51, 0.5);
   font-weight: 700;
   font-size: 15px;
+  padding-left: 15px;
 }
 
 .contact .container form textarea {
-  width: 100%;
+  min-width: 100%;
   color: #333;
-  padding: 15px;
+  padding: 15px 0px;
   border: 1px solid #ebebeb;
   letter-spacing: 0;
   background: #f0f0f0;
@@ -526,8 +531,38 @@ footer .container .copyright p>a {
 }
 
 @media only screen and (max-width: 767px) {
+  .hero-banner .container .row .content button {
+    padding: 15px 35px;
+  }
+
   .hero-banner .container .row .content ul {
     margin-top: 50px;
+  }
+
+  .hero-banner .container .row {
+    flex-direction: column;
+  }
+
+  .hero-banner .container .row .icons {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .hero-banner .container .row .icons ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .hero-banner .container {
+    max-width: 100%;
+  }
+
+  .hero-banner .container .row .content h1 {
+    font-size: 25px;
+  }
+
+  .hero-banner .container .row .content p {
+    font-size: 18px;
   }
 
   .about .container .row,
@@ -540,10 +575,21 @@ footer .container .copyright p>a {
     margin-bottom: 120px;
   }
 
+  .about .container .row .col .skills {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .about .container .row .col .skills li {
+    margin: 0px 0px 15px 0px;
+  }
+
   .contact .container form {
     max-width: 90%;
     margin: 50px auto;
+    padding: 1rem;
   }
+
 
   footer .container .row {
     align-items: center;
@@ -559,7 +605,7 @@ footer .container .copyright p>a {
     flex-direction: column;
   }
 
-    .about .container .row .col {
-      margin-bottom: 120px;
-    }
+  .about .container .row .col {
+    margin-bottom: 120px;
+  }
 }
