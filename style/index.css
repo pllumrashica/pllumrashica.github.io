@@ -28,11 +28,14 @@ html {
   }
 }
 
-
 .hero-banner {
   margin-top: 80px;
   height: 100vh;
-  background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245, 245, 245, .8)),
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
     url(../imgs/svgexport-1.svg);
 }
 
@@ -54,7 +57,7 @@ html {
 
 .hero-banner .container .row .icons ul {
   background: #fff;
-  box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   padding: 7px;
 }
 
@@ -64,17 +67,17 @@ html {
   margin: 20px 10px;
 }
 
-.hero-banner .container .row .icons ul li>a {
+.hero-banner .container .row .icons ul li > a {
   text-decoration: none;
   color: #000;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
-.hero-banner .container .row .icons ul li>a:hover {
+.hero-banner .container .row .icons ul li > a:hover {
   color: #facf0f;
 }
 
-.hero-banner .container .row .icons ul li>a>i {
+.hero-banner .container .row .icons ul li > a > i {
   font-size: 30px;
 }
 
@@ -117,10 +120,10 @@ html {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
-  transition: transform .3s;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
   padding: 20px 40px;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .hero-banner .container .row .content button:hover {
@@ -237,7 +240,7 @@ html {
   margin-bottom: 10px;
 }
 
-.about .container .row .col p>strong>a {
+.about .container .row .col p > strong > a {
   text-decoration: underline;
   color: #facf0f;
 }
@@ -253,10 +256,10 @@ html {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
-  transition: transform .3s;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
   padding: 20px 20px;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .about .container .row .col button:hover {
@@ -281,7 +284,7 @@ html {
   margin: 0px 15px 0px 0px;
   padding: 10px 20px;
   font-size: 16px;
-  background: rgba(153, 153, 153, .2);
+  background: rgba(153, 153, 153, 0.2);
   border-radius: 5px;
   font-weight: 600;
   color: #666;
@@ -314,6 +317,12 @@ html {
   column-gap: 50px;
 }
 
+.projects .container .row:nth-child(3),
+.projects .container .row:nth-child(5),
+.projects .container .row:nth-child(7) {
+  flex-direction: row-reverse;
+}
+
 .projects .container .row .col:first-child {
   flex-basis: 60%;
 }
@@ -325,7 +334,6 @@ html {
 .projects .container .row .col img {
   width: 100%;
 }
-
 
 .projects .container .row .col h4 {
   font-size: 30px;
@@ -352,10 +360,10 @@ html {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
-  transition: transform .3s;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
   padding: 20px 20px;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .projects .container .row .col button:hover {
@@ -372,7 +380,11 @@ html {
 
 /* Contact */
 .contact {
-  background: linear-gradient(to right, rgba(245, 245, 245, .8), rgba(245, 245, 245, .8)),
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
     url(../imgs/svgexport-1.svg);
 }
 
@@ -390,7 +402,7 @@ html {
 }
 
 .contact .container form {
-  box-shadow: rgba(100, 100, 111, .2) 0 7px 29px 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   background: #fff;
   padding: 4rem;
   margin: 100px auto 0px auto;
@@ -456,10 +468,10 @@ html {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
-  transition: transform .3s;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
   padding: 20px 20px;
-  transition: transform .4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   width: 100%;
   cursor: pointer;
 }
@@ -530,7 +542,7 @@ footer .container .copyright p {
   font-size: 12px;
 }
 
-footer .container .copyright p>a {
+footer .container .copyright p > a {
   color: #eee;
 }
 
@@ -593,7 +605,6 @@ footer .container .copyright p>a {
     margin: 50px auto;
     padding: 1rem;
   }
-
 
   footer .container .row {
     align-items: center;
